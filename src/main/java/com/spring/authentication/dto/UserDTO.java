@@ -1,10 +1,11 @@
 package com.spring.authentication.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.MappedSuperclass;
 
 @AllArgsConstructor
 @NoArgsConstructor

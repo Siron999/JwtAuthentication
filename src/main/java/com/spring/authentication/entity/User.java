@@ -1,6 +1,6 @@
 package com.spring.authentication.entity;
 
-import jakarta.persistence.MappedSuperclass;
+import javax.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
