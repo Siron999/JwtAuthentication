@@ -3,6 +3,7 @@ package com.spring.authentication.controller;
 import com.spring.authentication.dto.LoginRequestDTO;
 import com.spring.authentication.dto.LoginResponseDTO;
 import com.spring.authentication.dto.StudentDTO;
+import com.spring.authentication.exception.UserAlreadyExistsException;
 import com.spring.authentication.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,12 @@ public class AuthenticationController {
     @GetMapping("student")
     public ResponseEntity<String> studentAndAdmin() {
         return ResponseEntity.ok().body("Student And Admin");
+    }
+
+    @GetMapping("test")
+    public ResponseEntity<String> test() {
+        throw new UserAlreadyExistsException("User already exists");
+//        return ResponseEntity.ok().body("Test");
     }
 
 
